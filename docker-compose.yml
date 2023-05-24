@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 services:
   wireguard:
     image: lscr.io/linuxserver/wireguard
@@ -17,7 +17,7 @@ services:
       - INTERNAL_SUBNET=10.13.13.0 #optional
       - ALLOWEDIPS=0.0.0.0/0 #optional
     volumes:
-      - ~/wireguard/config:/config
+      - ./peers:/config
       - /lib/modules:/lib/modules
     ports:
       - 51820:51820/udp
