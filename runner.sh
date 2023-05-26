@@ -14,8 +14,8 @@ print_usage() {
 while getopts 'gsr' flag; do
   case "${flag}" in
     g) a_flag='true'; $node $worker_path get ;;
-    s) b_flag='true'; $node $worker_path set "$args" ;;
-    r) files='true'; $node $worker_path remove "$args" ;;
+    s) b_flag='true'; $node $worker_path set $args ;;
+    r) files='true'; $node $worker_path remove $args ;;
     *) print_usage
        exit 1 ;;
   esac
